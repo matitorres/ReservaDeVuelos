@@ -1090,21 +1090,21 @@ public class VistaVuelos extends javax.swing.JFrame {
                 try {
                     switch (vueloModificado.getEstado()) {
                         case "c":
-                            if (jTableVuelos.getValueAt(fila, 7).toString().equals("N") || jTableVuelos.getValueAt(fila, 7).toString().equals("D")) {
+                            if (jTableVuelos.getValueAt(fila, 7).toString().equals("NORMAL") || jTableVuelos.getValueAt(fila, 7).toString().equals("DEMORADO")) {
                                 for (int i = 0 ; i < mails.size() ; i++) {
                                     enviarCorreo ("vuelos032@gmail.com" , "vuelos123456" , mails.get(i) , "Vuelo cancelado" , "Estimado cliente. Lamentamos informale que su vuelo con id: "+id+", ha sido cancelado. Lamentamos las molestias. Saludos. Equipo de Vuelos32");
                                 }
                             }
                             break;
                         case "n":
-                            if (jTableVuelos.getValueAt(fila, 7).toString().equals("D") || jTableVuelos.getValueAt(fila, 7).toString().equals("C")) {
+                            if (jTableVuelos.getValueAt(fila, 7).toString().equals("DEMORADO") || jTableVuelos.getValueAt(fila, 7).toString().equals("CANCELADO")) {
                                 for (int i = 0 ; i < mails.size() ; i++) {
                                     enviarCorreo ("vuelos032@gmail.com" , "vuelos123456" , mails.get(i) , "Vuelo normalizado" , "Estimado cliente. Le informamos que su vuelo con id: "+id+", se ha normalizado. Saludos. Equipo de Vuelos32");
                                 }
                             }
                             break;
                         case "d":
-                            if (jTableVuelos.getValueAt(fila, 7).toString().equals("N") || jTableVuelos.getValueAt(fila, 7).toString().equals("C")) {
+                            if (jTableVuelos.getValueAt(fila, 7).toString().equals("NORMAL") || jTableVuelos.getValueAt(fila, 7).toString().equals("CANCELADO")) {
                                 for (int i = 0 ; i < mails.size() ; i++) {
                                     enviarCorreo ("vuelos032@gmail.com" , "vuelos123456" , mails.get(i) , "Vuelo demorado" , "Estimado cliente. Le informamos que su vuelo con id: "+id+", se encuentra demorado. Saludos. Equipo de Vuelos32");
                                 }

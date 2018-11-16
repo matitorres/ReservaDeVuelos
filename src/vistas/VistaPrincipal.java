@@ -71,7 +71,7 @@ import javax.swing.table.TableRowSorter;
     public VistaPrincipal() {
         initComponents();
         llenarComboCiudades();
-        //this.setLocationRelativeTo(null);
+        this.setLocationRelativeTo(null);
         //listaVuelos=vD.obtenerVuelos(); 
         //this.llenarTabla(listaVuelos);
          botones = new ArrayList<>();
@@ -175,8 +175,6 @@ import javax.swing.table.TableRowSorter;
         idAsientoComprado = new javax.swing.JLabel();
         jLabelCorreo = new javax.swing.JLabel();
         email = new javax.swing.JTextField();
-        jLabelCompras = new javax.swing.JLabel();
-        jLabelComprarAsiento = new javax.swing.JLabel();
         jLabelCerrar = new javax.swing.JLabel();
         jPanelFondoSeleccion = new javax.swing.JPanel();
         jLabelOrigen = new javax.swing.JLabel();
@@ -457,10 +455,10 @@ import javax.swing.table.TableRowSorter;
 
         jLabelInicio.setFont(new java.awt.Font("Arial", 1, 28)); // NOI18N
         jLabelInicio.setForeground(new java.awt.Color(102, 153, 51));
-        jLabelInicio.setText("Inicio //");
+        jLabelInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo.png"))); // NOI18N
         jLabelInicio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabelInicio.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        JPanel.add(jLabelInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 20, 98, 30));
+        JPanel.add(jLabelInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 15, 180, 40));
 
         jPanelDatosPasaje.setBackground(new java.awt.Color(102, 153, 51));
 
@@ -736,24 +734,6 @@ import javax.swing.table.TableRowSorter;
 
         JPanel.add(jPanelDatosPasaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 460, 420));
 
-        jLabelCompras.setFont(new java.awt.Font("Arial", 0, 28)); // NOI18N
-        jLabelCompras.setForeground(new java.awt.Color(102, 153, 51));
-        jLabelCompras.setText("Compras /");
-        jLabelCompras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabelCompras.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabelComprasMouseClicked(evt);
-            }
-        });
-        JPanel.add(jLabelCompras, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 20, -1, 30));
-
-        jLabelComprarAsiento.setBackground(new java.awt.Color(102, 153, 51));
-        jLabelComprarAsiento.setFont(new java.awt.Font("Arial", 0, 28)); // NOI18N
-        jLabelComprarAsiento.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelComprarAsiento.setText("Compra Pasaje");
-        JPanel.add(jLabelComprarAsiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 20, -1, 30));
-        jLabelComprarAsiento.getAccessibleContext().setAccessibleName("Comprar Vuelo");
-
         jLabelCerrar.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabelCerrar.setForeground(new java.awt.Color(102, 153, 51));
         jLabelCerrar.setText("X");
@@ -763,7 +743,7 @@ import javax.swing.table.TableRowSorter;
                 jLabelCerrarMouseClicked(evt);
             }
         });
-        JPanel.add(jLabelCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 10, 15, 15));
+        JPanel.add(jLabelCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 20, 15, 20));
 
         jPanelFondoSeleccion.setBackground(new java.awt.Color(102, 153, 51));
 
@@ -777,6 +757,7 @@ import javax.swing.table.TableRowSorter;
 
         jDateChooserSalida.setBackground(new java.awt.Color(102, 153, 51));
         jDateChooserSalida.setToolTipText("");
+        jDateChooserSalida.setMinSelectableDate(new Date());
         jDateChooserSalida.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jDateChooserSalidaMouseClicked(evt);
@@ -832,6 +813,7 @@ import javax.swing.table.TableRowSorter;
 
         jDateChooserVuelta.setBackground(new java.awt.Color(102, 153, 51));
         jDateChooserVuelta.setToolTipText("");
+        jDateChooserVuelta.setMinSelectableDate(new Date());
         jDateChooserVuelta.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jDateChooserVueltaMouseClicked(evt);
@@ -1202,11 +1184,6 @@ import javax.swing.table.TableRowSorter;
       
         
     }//GEN-LAST:event_jTableVuelosMouseClicked
-
-    private void jLabelComprasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelComprasMouseClicked
-        ventana.setVisible(false);
-        VistaCompra.visibilidad(true);
-    }//GEN-LAST:event_jLabelComprasMouseClicked
 
     private void jButtonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarActionPerformed
              List<Vuelo> listaVuelos = new ArrayList<>();
@@ -1696,8 +1673,6 @@ import javax.swing.table.TableRowSorter;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelCerrar;
-    private javax.swing.JLabel jLabelComprarAsiento;
-    private javax.swing.JLabel jLabelCompras;
     private javax.swing.JLabel jLabelCorreo;
     private javax.swing.JLabel jLabelDestino;
     private javax.swing.JLabel jLabelInicio;
