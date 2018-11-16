@@ -38,9 +38,9 @@ import javax.swing.table.TableRowSorter;
  *
  * @author pedro
  */
-public class VistaCompraAdmin extends javax.swing.JFrame {
+public class VistaCompra extends javax.swing.JFrame {
 
-    private static  VistaCompraAdmin ventana = new VistaCompraAdmin();
+    private static  VistaCompra ventana = new VistaCompra();
     
     /*static void visibilidad(boolean b) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -51,7 +51,7 @@ public class VistaCompraAdmin extends javax.swing.JFrame {
      private CompraData gestorCompra = new CompraData();
      private List<Compra> listaCompras = gestorCompra.obtenerCompras();
      
-     public VistaCompraAdmin() {
+     public VistaCompra() {
      
         initComponents();
         soloNumeros(cajaDniCliente);
@@ -442,7 +442,7 @@ public class VistaCompraAdmin extends javax.swing.JFrame {
                     exito = gestorCompra.borrarCompra(id);
                     
                 } catch (SQLException ex) {
-                    Logger.getLogger(VistaCompraAdmin.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(VistaCompra.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 JOptionPane.showMessageDialog(null,"Se ha eliminado la compra exitosamente");
 
@@ -488,7 +488,7 @@ public class VistaCompraAdmin extends javax.swing.JFrame {
                   gestorCompra.modificarCompra(id, nuevaTarjeta );
                    JOptionPane.showMessageDialog(null,"Modificacion exitosa");
               } catch (SQLException ex) {
-                  Logger.getLogger(VistaCompraAdmin.class.getName()).log(Level.SEVERE, null, ex);
+                  Logger.getLogger(VistaCompra.class.getName()).log(Level.SEVERE, null, ex);
                    JOptionPane.showMessageDialog(null,"erro en la actualizacion");
               }
              
@@ -603,102 +603,7 @@ public class VistaCompraAdmin extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VistaCompraAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VistaCompraAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VistaCompraAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VistaCompraAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-             
-                    new VistaCompraAdmin().setVisible(true);
-              
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonEliminarCompra;

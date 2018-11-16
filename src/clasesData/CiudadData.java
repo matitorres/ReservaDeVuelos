@@ -62,9 +62,8 @@ public class CiudadData {
   }
     
     public void borrarCiudad(int id) throws SQLException{
-        String sql = "DELETE FROM ciudad WHERE idCiudad = ? ;";
+        String sql = "DELETE FROM ciudad WHERE idCiudad = '"+id+"';";
         PreparedStatement statement = Conexion.getConexion().prepareStatement(sql);
-        statement.setInt(1, id);
         statement.executeUpdate();
         statement.close();
   }

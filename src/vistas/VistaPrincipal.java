@@ -51,8 +51,8 @@ import javax.swing.table.TableRowSorter;
  *
  * @author asus pc
  */
-    public class VistaNuevaCompra extends javax.swing.JFrame {
-    private static VistaNuevaCompra ventana = new VistaNuevaCompra();
+    public class VistaPrincipal extends javax.swing.JFrame {
+    private static VistaPrincipal ventana = new VistaPrincipal();
     private TableRowSorter filtro;
     private VueloData vD = new VueloData();
     private CiudadData cD = new CiudadData();
@@ -68,7 +68,7 @@ import javax.swing.table.TableRowSorter;
 
     private List<Vuelo> listaVuelos;    
 //Constructor
-    public VistaNuevaCompra() {
+    public VistaPrincipal() {
         initComponents();
         llenarComboCiudades();
         //this.setLocationRelativeTo(null);
@@ -111,7 +111,6 @@ import javax.swing.table.TableRowSorter;
         nombre = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        apellido = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         tarjeta = new javax.swing.JLabel();
         cerrarPanelConfirmar = new javax.swing.JButton();
@@ -136,6 +135,7 @@ import javax.swing.table.TableRowSorter;
         precioAsiento1 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
+        apellido = new javax.swing.JLabel();
         jLabelInicio = new javax.swing.JLabel();
         jPanelDatosPasaje = new javax.swing.JPanel();
         siguiente = new javax.swing.JButton();
@@ -189,7 +189,6 @@ import javax.swing.table.TableRowSorter;
         jButtonMostrarVuelos = new javax.swing.JButton();
         jLabelVuelta = new javax.swing.JLabel();
         jDateChooserVuelta = new com.toedter.calendar.JDateChooser();
-        jButtonAtras = new javax.swing.JButton();
         limpiarVuelos = new javax.swing.JButton();
         jButtonVerAsientos = new javax.swing.JButton();
         panelContenedorAsientos = new javax.swing.JPanel();
@@ -202,6 +201,7 @@ import javax.swing.table.TableRowSorter;
         jTableVuelos = new javax.swing.JTable();
         jButtonDisponible = new javax.swing.JButton();
         jButtonOcupado = new javax.swing.JButton();
+        labelAdmin = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(51, 204, 0));
         setUndecorated(true);
@@ -295,6 +295,8 @@ import javax.swing.table.TableRowSorter;
         jLabel36.setForeground(new java.awt.Color(255, 255, 255));
         jLabel36.setText("Datos de Usuario");
 
+        apellido.setText("jLabel37");
+
         javax.swing.GroupLayout panelDatosClienteLayout = new javax.swing.GroupLayout(panelDatosCliente);
         panelDatosCliente.setLayout(panelDatosClienteLayout);
         panelDatosClienteLayout.setHorizontalGroup(
@@ -306,17 +308,17 @@ import javax.swing.table.TableRowSorter;
                         .addGap(10, 10, 10)
                         .addGroup(panelDatosClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelDatosClienteLayout.createSequentialGroup()
+                                .addComponent(jLabel29)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(nombreAerolinea1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panelDatosClienteLayout.createSequentialGroup()
                                 .addComponent(jLabel28)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(nombreCiudadOrigen1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(24, 24, 24)
                                 .addComponent(jLabel31)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(precioAsiento1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelDatosClienteLayout.createSequentialGroup()
-                                .addComponent(jLabel29)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(nombreAerolinea1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(precioAsiento1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(jLabel36)
                     .addComponent(jLabel30))
                 .addGap(88, 88, 88))
@@ -338,11 +340,11 @@ import javax.swing.table.TableRowSorter;
                                 .addComponent(jLabel22)
                                 .addGap(18, 18, 18)
                                 .addGroup(panelDatosClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(tarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(panelDatosClienteLayout.createSequentialGroup()
                                         .addComponent(jButton1)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(cerrarPanelConfirmar))
-                                    .addComponent(tarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addComponent(cerrarPanelConfirmar))))))
                     .addGroup(panelDatosClienteLayout.createSequentialGroup()
                         .addGroup(panelDatosClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelDatosClienteLayout.createSequentialGroup()
@@ -351,8 +353,8 @@ import javax.swing.table.TableRowSorter;
                                 .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel20)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(apellido, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addComponent(apellido, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panelDatosClienteLayout.createSequentialGroup()
                                 .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(14, 14, 14)
@@ -435,7 +437,7 @@ import javax.swing.table.TableRowSorter;
                         .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelDatosClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel20)
-                        .addComponent(apellido, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(apellido)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelDatosClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel22)
@@ -899,20 +901,6 @@ import javax.swing.table.TableRowSorter;
 
         JPanel.add(jPanelFondoSeleccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 870, 80));
 
-        jButtonAtras.setBackground(new java.awt.Color(102, 153, 51));
-        jButtonAtras.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButtonAtras.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonAtras.setText("Salir");
-        jButtonAtras.setBorder(null);
-        jButtonAtras.setBorderPainted(false);
-        jButtonAtras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButtonAtras.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonAtrasActionPerformed(evt);
-            }
-        });
-        JPanel.add(jButtonAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 550, 80, 31));
-
         limpiarVuelos.setText("Limpiar");
         limpiarVuelos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -975,7 +963,7 @@ import javax.swing.table.TableRowSorter;
                 .addGap(18, 18, 18)
                 .addGroup(panelContenedorAsientosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE)
-                    .addComponent(panel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(panel1, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -1026,6 +1014,16 @@ import javax.swing.table.TableRowSorter;
             }
         });
         JPanel.add(jButtonOcupado, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 510, -1, 40));
+
+        labelAdmin.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
+        labelAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        labelAdmin.setText("Modo Administrador");
+        labelAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                labelAdminMouseClicked(evt);
+            }
+        });
+        JPanel.add(labelAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 610, 180, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1207,7 +1205,7 @@ import javax.swing.table.TableRowSorter;
 
     private void jLabelComprasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelComprasMouseClicked
         ventana.setVisible(false);
-        VistaCompraAdmin.visibilidad(true);
+        VistaCompra.visibilidad(true);
     }//GEN-LAST:event_jLabelComprasMouseClicked
 
     private void jButtonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarActionPerformed
@@ -1268,11 +1266,6 @@ import javax.swing.table.TableRowSorter;
 
 // TODO add your handling code here:
     }//GEN-LAST:event_jButtonMostrarVuelosActionPerformed
-
-    private void jButtonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtrasActionPerformed
-       ventana.setVisible(false);
-       VistaCompraAdmin.visibilidad(true);  // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonAtrasActionPerformed
 /**/
     private void jDateChooserSalidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jDateChooserSalidaMouseClicked
        //LocalDate salida = jDateChooserSalida.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
@@ -1415,7 +1408,7 @@ import javax.swing.table.TableRowSorter;
         try {
             gestorCliente.altaCliente(clienteNuevo);
         } catch (SQLException ex) {
-            Logger.getLogger(VistaNuevaCompra.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(VistaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
         nombreAerolinea1.setText(nombreAerolinea.getText());
         nombreAeronave1.setText(nombreAeronave.getText());
@@ -1471,7 +1464,7 @@ import javax.swing.table.TableRowSorter;
             }else{
             }
         } catch (SQLException ex) {
-            Logger.getLogger(VistaNuevaCompra.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(VistaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -1490,6 +1483,11 @@ import javax.swing.table.TableRowSorter;
     private void jDateChooserVueltaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jDateChooserVueltaMouseEntered
         // TODO add your handling code here:
     }//GEN-LAST:event_jDateChooserVueltaMouseEntered
+
+    private void labelAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelAdminMouseClicked
+       ventana.setVisible(false);
+       LoginAdmin.visibilidad(true);
+    }//GEN-LAST:event_labelAdminMouseClicked
      public void llenarDatosVuelo(int idAsiento){
         
      int fila = jTableVuelos.getSelectedRow();
@@ -1585,6 +1583,9 @@ import javax.swing.table.TableRowSorter;
     }
     */
     public static void visibilidad(boolean estado){
+        if(ventana == null){
+            ventana = new VistaPrincipal();
+        }
        ventana.setVisible(estado);
    }
       public void filtro(){
@@ -1628,7 +1629,8 @@ import javax.swing.table.TableRowSorter;
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VistaNuevaCompra().setVisible(true);
+                ventana = new VistaPrincipal();
+                ventana.setVisible(true);
             }
         });
     }
@@ -1648,7 +1650,6 @@ import javax.swing.table.TableRowSorter;
     private javax.swing.JLabel idAsientoComprado;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButtonAtras;
     private javax.swing.JButton jButtonBuscar;
     private javax.swing.JButton jButtonDisponible;
     private javax.swing.JButton jButtonMostrarVuelos;
@@ -1707,6 +1708,7 @@ import javax.swing.table.TableRowSorter;
     private javax.swing.JPanel jPanelFondoSeleccion;
     private javax.swing.JScrollPane jScrollPaneVuelos;
     private javax.swing.JTable jTableVuelos;
+    private javax.swing.JLabel labelAdmin;
     private javax.swing.JButton limpiarVuelos;
     private javax.swing.JLabel mailCliente;
     private javax.swing.JLabel nombre;

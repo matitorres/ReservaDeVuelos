@@ -179,6 +179,11 @@ public class VistaCiudad extends javax.swing.JFrame {
 
         buscarCiudad.setText("Buscar por nombre");
         buscarCiudad.setToolTipText("");
+        buscarCiudad.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buscarCiudadMouseClicked(evt);
+            }
+        });
         getContentPane().add(buscarCiudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 140, 30));
 
         verCiudades.setBackground(new java.awt.Color(102, 153, 51));
@@ -408,7 +413,7 @@ public class VistaCiudad extends javax.swing.JFrame {
 
     private void jLabelInicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelInicioMouseClicked
         ventana.setVisible(false);
-        VistaVueloCliente.visibilidad(true);
+        VistaPrincipal.visibilidad(true);
     }//GEN-LAST:event_jLabelInicioMouseClicked
 
     private void jLabelAdministradorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelAdministradorMouseClicked
@@ -425,14 +430,22 @@ public class VistaCiudad extends javax.swing.JFrame {
         modelo = (DefaultTableModel) tablaCiudades.getModel();
         modelo.setRowCount(0); 
         if (0 == JOptionPane.showConfirmDialog(this, "¿Esta seguro de eliminar esta ciudad?")) {
+            
             try {
                 gestor.borrarCiudad(id);
                 JOptionPane.showMessageDialog(null, "Se ha eliminado la ciudad exitosamente");
             } catch (SQLException ex) {
+                Logger.getLogger(VistaCiudad.class.getName()).log(Level.SEVERE, null, ex);
                 JOptionPane.showMessageDialog(null, "Error al eliminar ciudad");
             }
+                
+            
         }
     }//GEN-LAST:event_jButtonBorrarActionPerformed
+
+    private void buscarCiudadMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buscarCiudadMouseClicked
+        buscarCiudad.setText("");
+    }//GEN-LAST:event_buscarCiudadMouseClicked
 
     private boolean camposVacios() {
         boolean hayVacias = false;

@@ -167,12 +167,12 @@ public class VistaAdmin extends javax.swing.JFrame {
 
     private void jButtonComprasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonComprasActionPerformed
        ventana.setVisible(false);
-       VistaCompraAdmin.visibilidad(true);
+       VistaCompra.visibilidad(true);
     }//GEN-LAST:event_jButtonComprasActionPerformed
 
     private void jLabelInicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelInicioMouseClicked
         ventana.setVisible(false);
-        VistaVueloCliente.visibilidad(true);
+        VistaPrincipal.visibilidad(true);
     }//GEN-LAST:event_jLabelInicioMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
